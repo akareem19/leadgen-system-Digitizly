@@ -333,7 +333,7 @@ def main():
                 host = st.text_input("SMTP Host", get_setting('smtp_host') or "smtp.gmail.com")
                 port = st.text_input("SMTP Port", get_setting('smtp_port') or "587")
                 user = st.text_input("SMTP User", get_setting('smtp_user') or "")
-                pwd = st.text_input("SMTP Password", type="password", get_setting('smtp_pass') or "")
+                pwd = st.text_input("SMTP Password", type="password", value=get_setting('smtp_pass') or "")
                 from_e = st.text_input("From Email", get_setting('from_email') or "")
                 if st.form_submit_button("حفظ SMTP"):
                     save_setting('smtp_host', host)
